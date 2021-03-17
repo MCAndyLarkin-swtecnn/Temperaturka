@@ -116,6 +116,7 @@ class ViewController: UIViewController {
 extension UIColor {
 
     func rgb() -> Int? {
+        
         var fRed : CGFloat = 0
         var fGreen : CGFloat = 0
         var fBlue : CGFloat = 0
