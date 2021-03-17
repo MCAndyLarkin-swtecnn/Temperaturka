@@ -97,6 +97,7 @@ class ViewController: UIViewController {
         fahrenheitSlider.value = Float(fahr)
         
         applyNewColor(kelvin: kelvin)
+        
     }
     func applyNewColor(kelvin: Double){
         if let color = reflection.getTargetValue(kelvin){
@@ -153,7 +154,6 @@ extension UIColor {
             }())
     }
 }
-
 
 class ReflectionTransition{
     private var sourceBase: Double
