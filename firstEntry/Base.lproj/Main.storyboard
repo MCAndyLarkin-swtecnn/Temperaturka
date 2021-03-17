@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="PQp-Gh-DfQ">
-                                <rect key="frame" x="30" y="50" width="400.5" height="795"/>
+                                <rect key="frame" x="30" y="124" width="401" height="795"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PB7-hC-rsl">
-                                        <rect key="frame" x="0.0" y="0.0" width="400.5" height="197"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PB7-hC-rsl">
+                                        <rect key="frame" x="0.0" y="0.0" width="401" height="197"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="-273.15" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-8U-CwS">
-                                                <rect key="frame" x="30" y="0.0" width="340.5" height="166.5"/>
-                                                <color key="backgroundColor" systemColor="separatorColor"/>
-                                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="30" y="0.0" width="341" height="57.5"/>
+                                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                                <color key="textColor" systemColor="systemTealColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <action selector="celciumTextFieldDidChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="0l4-iH-Hky"/>
@@ -44,17 +44,17 @@
                                             <constraint firstAttribute="trailing" secondItem="TlF-8U-CwS" secondAttribute="trailing" constant="30" id="0lX-0Q-Bdo"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FbO-Ba-t3t">
-                                        <rect key="frame" x="0.0" y="299" width="400.5" height="197"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FbO-Ba-t3t">
+                                        <rect key="frame" x="0.0" y="299" width="401" height="197"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-Jh-NkC">
-                                                <rect key="frame" x="-2" y="0.0" width="404.5" height="167.5"/>
+                                                <rect key="frame" x="-2" y="0.0" width="405" height="31"/>
                                                 <connections>
                                                     <action selector="fahrenheitSliderDidMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="vOH-xU-nbp"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-460 ° of Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FHg-BT-MYx">
-                                                <rect key="frame" x="0.0" y="176.5" width="400.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="176.5" width="401" height="20.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -62,17 +62,17 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="85B-lX-dI6">
-                                        <rect key="frame" x="0.0" y="598" width="400.5" height="197"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="85B-lX-dI6">
+                                        <rect key="frame" x="0.0" y="598" width="401" height="197"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 Kelvins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovg-br-g2y">
-                                                <rect key="frame" x="159.5" y="0.0" width="82" height="93.5"/>
+                                                <rect key="frame" x="159.5" y="0.0" width="82" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Asb-8D-nQq">
-                                                <rect key="frame" x="153.5" y="103.5" width="94" height="93.5"/>
+                                                <rect key="frame" x="153.5" y="165" width="94" height="32"/>
                                                 <connections>
                                                     <action selector="kelvinStepperDidPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Zo-jJ-Jcx"/>
                                                 </connections>
@@ -89,10 +89,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="PQp-Gh-DfQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="AQI-jH-qxQ"/>
                             <constraint firstAttribute="trailing" secondItem="PQp-Gh-DfQ" secondAttribute="trailing" constant="30" id="Iao-J5-G1e"/>
                             <constraint firstItem="PQp-Gh-DfQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="QzV-6Q-Rxr"/>
-                            <constraint firstAttribute="bottom" secondItem="PQp-Gh-DfQ" secondAttribute="bottom" constant="50" id="pI8-ml-W3P"/>
+                            <constraint firstItem="PQp-Gh-DfQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="UZM-ks-Uak"/>
+                            <constraint firstAttribute="bottom" secondItem="PQp-Gh-DfQ" secondAttribute="bottom" constant="120" id="UnR-MW-tTf"/>
+                            <constraint firstAttribute="trailing" secondItem="PQp-Gh-DfQ" secondAttribute="trailing" constant="30" id="ZEW-Ef-UfQ"/>
+                            <constraint firstItem="PQp-Gh-DfQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="a9j-Pk-2ub"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="quO-X3-37p"/>
@@ -110,11 +112,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
