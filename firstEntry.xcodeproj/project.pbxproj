@@ -15,6 +15,8 @@
 		CE8610562600BFE5000154FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8610542600BFE5000154FF /* LaunchScreen.storyboard */; };
 		CE8610612600BFE5000154FF /* firstEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8610602600BFE5000154FF /* firstEntryTests.swift */; };
 		CE86106C2600BFE5000154FF /* firstEntryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86106B2600BFE5000154FF /* firstEntryUITests.swift */; };
+		CE86108826034136000154FF /* ReflectionTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86108726034136000154FF /* ReflectionTransition.swift */; };
+		CE86108D26034180000154FF /* RGBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86108C26034180000154FF /* RGBExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CE8610672600BFE5000154FF /* firstEntryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = firstEntryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE86106B2600BFE5000154FF /* firstEntryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstEntryUITests.swift; sourceTree = "<group>"; };
 		CE86106D2600BFE5000154FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE86108726034136000154FF /* ReflectionTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionTransition.swift; sourceTree = "<group>"; };
+		CE86108C26034180000154FF /* RGBExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				CE8610522600BFE5000154FF /* Assets.xcassets */,
 				CE8610542600BFE5000154FF /* LaunchScreen.storyboard */,
 				CE8610572600BFE5000154FF /* Info.plist */,
+				CE86108726034136000154FF /* ReflectionTransition.swift */,
+				CE86108C26034180000154FF /* RGBExtensions.swift */,
 			);
 			path = firstEntry;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			files = (
 				CE86104E2600BFE2000154FF /* ViewController.swift in Sources */,
 				CE86104A2600BFE2000154FF /* AppDelegate.swift in Sources */,
+				CE86108D26034180000154FF /* RGBExtensions.swift in Sources */,
 				CE86104C2600BFE2000154FF /* SceneDelegate.swift in Sources */,
+				CE86108826034136000154FF /* ReflectionTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

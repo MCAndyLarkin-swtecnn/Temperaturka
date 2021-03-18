@@ -62,7 +62,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="85B-lX-dI6">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="85B-lX-dI6">
                                         <rect key="frame" x="0.0" y="598" width="401" height="197"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 Kelvins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovg-br-g2y">
@@ -78,6 +78,9 @@
                                                 </connections>
                                             </stepper>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ovg-br-g2y" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Asb-8D-nQq" secondAttribute="top" constant="8" symbolic="YES" id="cGO-WX-Psa"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
