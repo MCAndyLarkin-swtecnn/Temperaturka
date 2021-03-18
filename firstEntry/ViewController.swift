@@ -47,7 +47,8 @@ class ViewController: UIViewController {
 //        4294939904 - orange
 //        4284139770 - blue
         reflection =
-            ReflectionTransition(sourcePairOfLimits: (KELVIN_MIN, KELVIN_MAX), targetPairOfLimits: (Double( blue ), Double( orange )))
+            ReflectionTransition(sourcePairOfLimits: (KELVIN_MIN, KELVIN_MAX),
+                                 targetPairOfLimits: (Double( blue ), Double( orange )))
     }
 
     @IBAction func celciumTextFieldDidChanged(_ sender: Any){
@@ -101,17 +102,10 @@ class ViewController: UIViewController {
     }
     func applyNewColor(kelvin: Double){
         if let color = reflection.getTargetValue(kelvin){
-            view.backgroundColor = UIColor.fromRgb(rgb: Int(color))
-            celciumTextField.textColor = UIColor.fromRgb(rgb: Int(color))
+            view.backgroundColor = Int(color).fromRBG()
+            celciumTextField.textColor = Int(color).fromRBG()
         }
     }
-//    func iDebuq() {
-//        print("Debug")
-//        print(view.backgroundColor)
-//        let rgb = view.backgroundColor!.rgb()!
-//        print(rgb)
-//        print(UIColor.fromRgb(rgb: rgb))
-//    }
 
 }
 extension UIColor {
@@ -132,7 +126,6 @@ extension UIColor {
             let rgb = (iAlpha << 24) + (iRed << 16) + (iGreen << 8) + iBlue
             return rgb
         } else {
-            // Could not extract RGBA components:
             return nil
         }
     }
@@ -154,7 +147,11 @@ extension UIColor {
             }())
     }
 }
-
+extension Int{
+    func fromRBG() -> UIColor {
+        return UIColor.fromRgb(rgb: self)
+    }
+}
 class ReflectionTransition{
     private var sourceBase: Double
     private var targetBase: Double
@@ -164,13 +161,15 @@ class ReflectionTransition{
     
     public init(sourcePairOfLimits source: (min: Double, max: Double), targetPairOfLimits target: (min: Double, max: Double)){
         (sourceBase, sourceDif) = {
-            let dif = source.max - source.min
+            var dif = source.max - source.min
+            dif = dif > 0 ? dif : -dif
             let base = min(source.max, source.min)
             return (base, dif)
         }()
         
         (targetBase, targetDif) = {
-            let dif = target.max - target.min
+            var dif = target.max - target.min
+            dif = dif > 0 ? dif : -dif
             let base = min(target.max, target.min)
             return (base, dif)
         }()
@@ -181,7 +180,7 @@ class ReflectionTransition{
         if dif > sourceDif || dif < 0{
             return nil
         }
-        let koef = (sourceValue-sourceBase) / sourceDif
+        let koef = dif / sourceDif
         return targetBase + koef * targetDif
     }
 }
