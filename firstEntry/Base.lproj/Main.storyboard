@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5V-6a-q4t">
+                                <rect key="frame" x="0.0" y="218" width="461" height="499"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="PQp-Gh-DfQ">
                                 <rect key="frame" x="30" y="124" width="401" height="795"/>
                                 <subviews>
@@ -92,12 +96,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="P5V-6a-q4t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A7T-tU-b2P"/>
+                            <constraint firstItem="P5V-6a-q4t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-200" id="EHF-T1-AP1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P5V-6a-q4t" secondAttribute="trailing" id="H9p-dT-9XI"/>
                             <constraint firstAttribute="trailing" secondItem="PQp-Gh-DfQ" secondAttribute="trailing" constant="30" id="Iao-J5-G1e"/>
                             <constraint firstItem="PQp-Gh-DfQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="QzV-6Q-Rxr"/>
                             <constraint firstItem="PQp-Gh-DfQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="UZM-ks-Uak"/>
                             <constraint firstAttribute="bottom" secondItem="PQp-Gh-DfQ" secondAttribute="bottom" constant="120" id="UnR-MW-tTf"/>
                             <constraint firstAttribute="trailing" secondItem="PQp-Gh-DfQ" secondAttribute="trailing" constant="30" id="ZEW-Ef-UfQ"/>
                             <constraint firstItem="PQp-Gh-DfQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="a9j-Pk-2ub"/>
+                            <constraint firstItem="P5V-6a-q4t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="200" id="v4Z-XR-7jg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="quO-X3-37p"/>
@@ -107,6 +115,7 @@
                         <outlet property="fahrenheitSlider" destination="Pca-Jh-NkC" id="bbM-wm-AVh"/>
                         <outlet property="kelvinLabel" destination="Ovg-br-g2y" id="plk-so-iTI"/>
                         <outlet property="kelvinStepper" destination="Asb-8D-nQq" id="0xQ-JB-45b"/>
+                        <outlet property="redView" destination="P5V-6a-q4t" id="EKr-9J-8KM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -117,6 +126,9 @@
     <resources>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

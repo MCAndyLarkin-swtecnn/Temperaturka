@@ -1,9 +1,5 @@
-//
-//  RGBExtensions.swift
-//  firstEntry
-//
-//  Created by user on 18.03.2021.
-//
+
+//Usseless extensions
 
 import UIKit
 

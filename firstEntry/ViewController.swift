@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var kelvinStepper: UIStepper!
     @IBOutlet var kelvinLabel: UILabel!
+    
+    @IBOutlet var redView: UIView!
 
 
     let CELSIUM_MAX: Double = 1000
@@ -24,7 +26,6 @@ class ViewController: UIViewController {
     lazy var KELVIN_MAX: Double = CELSIUM_MAX + 273.15
     lazy var KELVIN_MIN: Double = CELSIUM_MIN + 273.15
     
-    var reflection :ReflectionTransition!
     
     
     override func viewDidLoad() {
@@ -41,14 +42,8 @@ class ViewController: UIViewController {
         fahrenheitSlider.value = FAHRENHEIT_MIN
         kelvinStepper.value = KELVIN_MIN
         
-        let blue = celciumTextField.textColor!.rgb()!
-        let orange = /*orange*/4294939904
-        
-//        4294939904 - orange
-//        4284139770 - blue
-        reflection =
-            ReflectionTransition(sourcePairOfLimits: (KELVIN_MIN, KELVIN_MAX),
-                                 targetPairOfLimits: (Double( blue ), Double( orange )))
+        redView.alpha = 0
+        celciumTextField.textColor = UIColor.white
     }
 
     @IBAction func celciumTextFieldDidChanged(_ sender: Any){
@@ -67,7 +62,7 @@ class ViewController: UIViewController {
                 kelvinLabel.text = "\(kelvin) " + "K"
                 kelvinStepper.value = kelvin
                 
-                applyNewColor(kelvin: kelvin)
+                redView.alpha = CGFloat((kelvin-KELVIN_MIN)/(KELVIN_MAX-KELVIN_MIN))
             }else{
                 celciumTextField.text = String(str!.prefix(str!.count-1))
             }
@@ -84,7 +79,7 @@ class ViewController: UIViewController {
         kelvinLabel.text = "\(kelvin) K"
         kelvinStepper.value = kelvin
         
-        applyNewColor(kelvin: kelvin)
+        redView.alpha = CGFloat((kelvin-KELVIN_MIN)/(KELVIN_MAX-KELVIN_MIN))
     }
     @IBAction func kelvinStepperDidPushed(_ sender: Any){
         let kelvin = round((kelvinStepper.value) * 100) / 100
@@ -97,14 +92,6 @@ class ViewController: UIViewController {
         fahrenheitLabel.text = "\(round( fahr * 100) / 100) ° of Fahrenheit"
         fahrenheitSlider.value = Float(fahr)
         
-        applyNewColor(kelvin: kelvin)
-        
+        redView.alpha = CGFloat((kelvin-KELVIN_MIN)/(KELVIN_MAX-KELVIN_MIN))
     }
-    func applyNewColor(kelvin: Double){
-        if let color = reflection.getTargetValue(kelvin){
-            view.backgroundColor = Int(color).fromRBG()
-            celciumTextField.textColor = Int(color).fromRBG()
-        }
-    }
-
 }

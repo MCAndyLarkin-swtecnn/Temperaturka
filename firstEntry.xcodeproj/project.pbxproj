@@ -103,6 +103,7 @@
 		CE8610482600BFE2000154FF /* firstEntry */ = {
 			isa = PBXGroup;
 			children = (
+				CE8610D826060C93000154FF /* StorageUselessFiles */,
 				CE8610492600BFE2000154FF /* AppDelegate.swift */,
 				CE86104B2600BFE2000154FF /* SceneDelegate.swift */,
 				CE86104D2600BFE2000154FF /* ViewController.swift */,
@@ -110,8 +111,6 @@
 				CE8610522600BFE5000154FF /* Assets.xcassets */,
 				CE8610542600BFE5000154FF /* LaunchScreen.storyboard */,
 				CE8610572600BFE5000154FF /* Info.plist */,
-				CE86108726034136000154FF /* ReflectionTransition.swift */,
-				CE86108C26034180000154FF /* RGBExtensions.swift */,
 			);
 			path = firstEntry;
 			sourceTree = "<group>";
@@ -132,6 +131,15 @@
 				CE86106D2600BFE5000154FF /* Info.plist */,
 			);
 			path = firstEntryUITests;
+			sourceTree = "<group>";
+		};
+		CE8610D826060C93000154FF /* StorageUselessFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CE86108726034136000154FF /* ReflectionTransition.swift */,
+				CE86108C26034180000154FF /* RGBExtensions.swift */,
+			);
+			path = StorageUselessFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
